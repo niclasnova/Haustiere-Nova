@@ -1,0 +1,262 @@
+:root{
+  --bg:#0b1220;
+  --card:#111b31;
+  --card2:#0f172a;
+  --text:#e5e7eb;
+  --muted:#b7c0d1;
+  --accent:#7dd3fc;
+  --accent2:#a7f3d0;
+  --line:rgba(229,231,235,.14);
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(1100px 700px at 20% 10%, rgba(125,211,252,.18), transparent 60%),
+              radial-gradient(900px 600px at 80% 20%, rgba(167,243,208,.14), transparent 55%),
+              linear-gradient(180deg, var(--bg), #050814);
+  color:var(--text);
+  line-height:1.55;
+}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+.container{width:min(1050px, 92vw); margin:0 auto}
+.skip{
+  position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden;
+}
+.skip:focus{
+  left:1rem; top:1rem; width:auto; height:auto;
+  background:#fff; color:#000; padding:.6rem .8rem; border-radius:.6rem; z-index:9999;
+}
+header{
+  position:sticky; top:0; z-index:100;
+  background:rgba(5,8,20,.76);
+  backdrop-filter: blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.topbar{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:.9rem 0;
+  gap:1rem;
+}
+.brand{
+  display:flex; gap:.8rem; align-items:center;
+}
+.logo{
+  width:38px; height:38px; border-radius:12px;
+  background: linear-gradient(135deg, rgba(125,211,252,.95), rgba(167,243,208,.95));
+  box-shadow: var(--shadow);
+}
+.brand h1{
+  font-size:1.05rem; margin:0;
+  letter-spacing:.2px;
+}
+.brand small{display:block; color:var(--muted); margin-top:.1rem}
+nav ul{
+  list-style:none; margin:0; padding:0;
+  display:flex; gap:.5rem; flex-wrap:wrap;
+  justify-content:flex-end;
+}
+nav a{
+  display:inline-block;
+  padding:.45rem .7rem;
+  border-radius:.7rem;
+  border:1px solid transparent;
+  color:var(--text);
+}
+nav a.active{
+  border-color: rgba(125,211,252,.35);
+  background: rgba(125,211,252,.12);
+}
+nav a:hover{
+  border-color: rgba(229,231,235,.18);
+  background: rgba(255,255,255,.06);
+  text-decoration:none;
+}
+.hero{
+  padding:2.4rem 0 1.3rem;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap:1.2rem;
+  align-items:stretch;
+}
+@media (max-width: 860px){
+  .hero-grid{grid-template-columns:1fr}
+}
+.card{
+  background: linear-gradient(180deg, rgba(17,27,49,.9), rgba(15,23,42,.9));
+  border:1px solid var(--line);
+  border-radius:1.2rem;
+  padding:1.2rem;
+  box-shadow: var(--shadow);
+}
+.card h2{margin:.1rem 0 .5rem; font-size:1.55rem}
+.card p{margin:.45rem 0; color:var(--muted)}
+.badges{display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.9rem}
+.badge{
+  display:inline-flex; align-items:center; gap:.4rem;
+  padding:.35rem .55rem;
+  border-radius:999px;
+  border:1px solid rgba(229,231,235,.18);
+  background: rgba(255,255,255,.04);
+  color: var(--text);
+  font-size:.92rem;
+}
+.grid3{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:1rem;
+}
+@media (max-width: 900px){
+  .grid3{grid-template-columns:1fr}
+}
+.pet-card img{
+  width:100%;
+  border-radius:1rem;
+  border:1px solid rgba(229,231,235,.14);
+  background:#fff;
+}
+.pet-card h3{margin:.7rem 0 .2rem; font-size:1.2rem}
+.pet-card p{margin:.35rem 0; color:var(--muted)}
+.kicker{color:var(--accent2); letter-spacing:.15em; text-transform:uppercase; font-size:.82rem}
+section{padding:1.1rem 0}
+.section-title{
+  display:flex; align-items:baseline; justify-content:space-between; gap:1rem;
+  margin:1.3rem 0 .7rem;
+}
+.section-title h2{margin:0; font-size:1.25rem}
+hr.sep{
+  border:none; border-top:1px solid var(--line);
+  margin:1rem 0;
+}
+.two-col{
+  display:grid; grid-template-columns: 1fr 1fr; gap:1rem;
+}
+@media (max-width: 900px){ .two-col{grid-template-columns:1fr} }
+ul,ol{margin:.4rem 0 .2rem 1.2rem}
+table{
+  width:100%;
+  border-collapse:collapse;
+  overflow:hidden;
+  border-radius:1rem;
+  border:1px solid var(--line);
+}
+th, td{
+  padding:.75rem .7rem;
+  border-bottom:1px solid var(--line);
+  vertical-align:top;
+}
+th{background: rgba(255,255,255,.06); text-align:left}
+tr:last-child td{border-bottom:none}
+.caption{color:var(--muted); font-size:.95rem; margin-top:.5rem}
+.qr{
+  display:flex; gap:1rem; align-items:center; flex-wrap:wrap;
+}
+.qr img{
+  width:160px; height:auto;
+  border-radius:1rem;
+  border:1px solid rgba(229,231,235,.18);
+  background:#fff;
+}
+form{
+  display:grid; gap:.8rem;
+}
+label{display:grid; gap:.35rem; font-weight:600}
+input, select, textarea{
+  font:inherit;
+  padding:.65rem .7rem;
+  border-radius:.8rem;
+  border:1px solid rgba(229,231,235,.18);
+  background: rgba(255,255,255,.04);
+  color: var(--text);
+  outline:none;
+}
+textarea{min-height:120px; resize:vertical}
+input:focus, select:focus, textarea:focus{
+  border-color: rgba(125,211,252,.55);
+  box-shadow: 0 0 0 4px rgba(125,211,252,.15);
+}
+button{
+  font:inherit;
+  padding:.7rem .9rem;
+  border-radius:.9rem;
+  border:1px solid rgba(229,231,235,.18);
+  background: rgba(125,211,252,.15);
+  color: var(--text);
+  cursor:pointer;
+  width: fit-content;
+}
+button:hover{background: rgba(125,211,252,.22)}
+.notice{
+  padding:.85rem .9rem;
+  border-radius:1rem;
+  border:1px solid rgba(167,243,208,.25);
+  background: rgba(167,243,208,.1);
+  color: var(--text);
+}
+footer{
+  margin-top:2rem;
+  border-top:1px solid var(--line);
+  padding:1.3rem 0 2rem;
+  color:var(--muted);
+}
+footer .footgrid{
+  display:grid; grid-template-columns:1.3fr .7fr; gap:1rem;
+}
+@media (max-width: 900px){ footer .footgrid{grid-template-columns:1fr} }
+.small{font-size:.95rem}
+
+
+/* Fotos (JPG) sauber zentriert */
+.photo{max-width:720px; margin:.4rem auto;}
+.photo img{display:block;}
+
+
+/* Fotos auf der Startseite in den Karten */
+.pet-photo{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:1rem;
+  border:1px solid rgba(229,231,235,.14);
+  background:#fff;
+  display:block;
+}
+
+/* Kleine Icon-Reihe für eigene Grafiken */
+.icon-row{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:1rem;
+  margin-top:.8rem;
+}
+.icon-item{
+  margin:0;
+  padding:.9rem;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(229,231,235,.14);
+  border-radius:1rem;
+  text-align:center;
+}
+.icon-item img{
+  width:100%;
+  max-width:220px;
+  height:auto;
+  background:#fff;
+  border-radius:.9rem;
+  border:1px solid rgba(229,231,235,.14);
+}
+.icon-item figcaption{
+  margin-top:.55rem;
+  color:var(--muted);
+  font-size:.95rem;
+}
+
+@media (max-width:800px){
+  .icon-row{ grid-template-columns:1fr; }
+  .pet-photo{ height:200px; }
+}
