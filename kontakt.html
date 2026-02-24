@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Haustiere: Kontakt</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip" href="#content">Zum Inhalt springen</a>
+<header>
+  <div class="container topbar">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"></div>
+      <div>
+        <h1>Haustiere: Projektseite (Schwerpunkt Katze)</h1>
+        <small>Informatik GK, statische HTML/CSS-Webseite</small>
+      </div>
+    </div>
+    <nav aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="hunde.html">Hunde</a></li>
+        <li><a href="katzen.html">Katzen</a></li>
+        <li><a href="kleintiere.html">Kleintiere</a></li>
+        <li><a href="kontakt.html" class="active">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="content" class="container">
+
+<section class="hero">
+  <div class="hero-grid">
+
+    <div class="card">
+      <div class="kicker">Kontakt</div>
+      <h2>Nova Reif</h2>
+      <p>E-Mail: <a href="mailto:novareif@icloud.com">novareif@icloud.com</a></p>
+    </div>
+<div class="card">
+      <div class="kicker">E-Mail</div>
+      <h2>Mail-Link</h2>
+      <p>Direkt eine E-Mail öffnen:</p>
+      <p><a href="mailto:novareif@icloud.com?subject=Haustier%20Projekt&body=Hallo%2C%20ich%20habe%20eine%20Frage%20zum%20Projekt.">Mail schreiben →</a></p>
+      </div>
+
+  </div>
+</section>
+
+<section class="two-col">
+  <div class="card">
+    <h2>Formular</h2>
+    <form data-demo-form>
+      <label>
+        Name
+        <input type="text" name="name" placeholder="Max Mustermann" required>
+      </label>
+
+      <label>
+        E-Mail
+        <input type="email" name="email" placeholder="name@mail.de" required>
+      </label>
+
+      <label>
+        Lieblings-Haustier
+        <select name="pet" required>
+          <option value="" selected disabled>Bitte auswählen</option>
+          <option value="Hund">Hund</option>
+          <option value="Katze">Katze</option>
+          <option value="Kaninchen">Kaninchen</option>
+          <option value="Meerschweinchen">Meerschweinchen</option>
+        </select>
+      </label>
+
+      <fieldset class="card" style="padding: .9rem; margin:0; border-radius:1rem">
+        <legend style="padding:0 .4rem">Erfahrung</legend>
+        <label style="font-weight:400; display:flex; gap:.5rem; align-items:center">
+          <input type="radio" name="exp" value="Anfänger" required> Anfänger
+        </label>
+        <label style="font-weight:400; display:flex; gap:.5rem; align-items:center">
+          <input type="radio" name="exp" value="Etwas Erfahrung"> Etwas Erfahrung
+        </label>
+        <label style="font-weight:400; display:flex; gap:.5rem; align-items:center">
+          <input type="radio" name="exp" value="Sehr erfahren"> Sehr erfahren
+        </label>
+      </fieldset>
+
+      <label style="font-weight:400; display:flex; gap:.55rem; align-items:center">
+        <input type="checkbox" name="agree" required>
+        Ich habe verstanden, dass ein Haustier Verantwortung bedeutet.
+      </label>
+
+      <label>
+        Nachricht
+        <textarea name="msg" placeholder="Deine Frage oder Idee..." required></textarea>
+      </label>
+
+      <button type="submit">Formular testen</button>
+
+      <p class="caption" style="margin:.2rem 0 0">Hinweis: Es werden keine Daten gespeichert (Schulprojekt).</p>
+
+    </form>
+
+    <div id="form-output" style="margin-top:1rem"></div>
+    
+  </div>
+
+  <div class="card">
+    <h2>Tabelle: Aufwand &amp; Kosten</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Haustier</th>
+          <th>Zeit pro Tag</th>
+          <th>Kosten (geschätzt)</th>
+          <th>Besonderheiten</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Hund</td>
+          <td>hoch</td>
+          <td>Futter, Steuer, Tierarzt, Zubehör</td>
+          <td>Erziehung und Bewegung sind Pflicht</td>
+        </tr>
+        <tr>
+          <td>Katze</td>
+          <td>mittel</td>
+          <td>Futter, Streu, Tierarzt</td>
+          <td>Kratzbaum, Spiel und ruhige Plätze</td>
+        </tr>
+        <tr>
+          <td>Kleintier</td>
+          <td>mittel</td>
+          <td>Futter, Einstreu/Heu, Tierarzt</td>
+          <td>Platz und artgerechte Haltung</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="caption">Hinweis: Die Angaben sind grobe Schätzwerte.</p>
+
+    <hr class="sep">
+
+    <h2>Navigation &amp; Links</h2>
+    <p>Interne Links:</p>
+    <ul>
+      <li><a href="index.html">Start</a></li>
+      <li><a href="hunde.html">Hunde</a></li>
+      <li><a href="katzen.html">Katzen</a></li>
+      <li><a href="kleintiere.html">Kleintiere</a></li>
+    </ul>
+
+    <p>Externer Link (öffnet neuen Tab):</p>
+    <p><a href="https://de.wikipedia.org/wiki/Tierarzt" target="_blank" rel="noreferrer">Wikipedia: Tierarzt</a></p>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="container footgrid">
+    <div>
+      <div class="small">
+        <strong>Hinweis:</strong> Diese Seite ist ein Schulprojekt. Bilder/Grafiken sind eigene Dateien (Ordner <code>img</code>).
+      </div>
+      <div class="small" style="margin-top:.4rem">Projekt von Nova Reif</div>
+      <div class="small" style="margin-top:.5rem">
+        Kontakt per E-Mail: <a href="mailto:novareif@icloud.com">novareif@icloud.com</a>
+      </div>
+    </div>
+    <div class="small">
+      Externe Links:<br>
+      <a href="https://de.wikipedia.org/wiki/Haustier" target="_blank" rel="noreferrer">Wikipedia: Haustier</a><br>
+      <a href="https://www.tierschutzbund.de/" target="_blank" rel="noreferrer">Deutscher Tierschutzbund</a>
+    </div>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
